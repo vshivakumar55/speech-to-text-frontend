@@ -6,7 +6,8 @@ const Transcriptions = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/transcriptions')
+    axios.get('https://speech-to-text-backend.onrender.com/transcriptions')
+
       .then((res) => {
         setTranscriptions(res.data);
         setLoading(false);
