@@ -5,7 +5,8 @@ const SavedTranscriptions = () => {
   const [transcriptions, setTranscriptions] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/transcriptions')
+    axios.get('https://speech-to-text-backend.onrender.com/transcriptions')
+
       .then((response) => setTranscriptions(response.data))
       .catch((error) => console.error('Error fetching transcriptions:', error));
   }, []);
