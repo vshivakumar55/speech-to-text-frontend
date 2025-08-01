@@ -23,7 +23,8 @@ const UploadForm = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:5000/upload', formData);
+      const res = await axios.post('fetch("https://speech-to-text-backend.onrender.com/...")
+', formData);
       setTranscription(res.data.transcription);
       setError('');
     } catch (err) {
